@@ -4,10 +4,12 @@ import java.math.BigDecimal;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 @Entity
 public class ExchangeValue {
 	@Id
 	private Long id;
+	@NotNull
 	private String currencyFrom;
 	private String currencyTo;
 	private BigDecimal conversionMultiple;
